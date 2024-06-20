@@ -27,7 +27,7 @@ const initialProjects = [
 const Dashboard = () => {
   const [projects, setProjects] = useState(initialProjects);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(initialProjects[0]);
 
   const handleDelete = (projectName) => {
     setProjects(projects.filter((project) => project.name !== projectName));
